@@ -17,12 +17,22 @@ struct AddAssignmentView: View {
     var body: some View {
         NavigationView {
             Form {
+                TextField("Description", text: $description)
+                DatePicker("Due Date", selection: $dueDate, displayedComponents: .date)
                 Picker("Course", selection: $course) {
                     ForEach(Self.courses, id: \.self) { course in
                         Text(course)
                     }
                 }
             }
+            .navigationBarTitle("Add New Assignment", displayMode: .inline)
+            .navigationBarItems(trailing: Button("Save") {
+                if course.count > 0 && description.count > 0 {
+                    let item = AssignmentItem(id: UUID(), course: course, description: description, dueDate: dueDate)
+                    assignmentList.items.append(item)
+                    presentationMode.wrappedValue.dismiss()
+                }
+            })
         }
     }
 }
