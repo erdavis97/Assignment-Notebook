@@ -11,6 +11,7 @@
 		4AE4791E2B68020600D95610 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE4791D2B68020600D95610 /* ContentView.swift */; };
 		4AE479202B68020800D95610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE4791F2B68020800D95610 /* Assets.xcassets */; };
 		4AE479232B68020800D95610 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AE479222B68020800D95610 /* Preview Assets.xcassets */; };
+		4AE4792A2B69503E00D95610 /* AssignmentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE479292B69503E00D95610 /* AssignmentList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		4AE4791D2B68020600D95610 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4AE4791F2B68020800D95610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AE479222B68020800D95610 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4AE479292B69503E00D95610 /* AssignmentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				4AE4791B2B68020600D95610 /* Assignment_NotebookApp.swift */,
 				4AE4791D2B68020600D95610 /* ContentView.swift */,
+				4AE479292B69503E00D95610 /* AssignmentList.swift */,
 				4AE4791F2B68020800D95610 /* Assets.xcassets */,
 				4AE479212B68020800D95610 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AE4792A2B69503E00D95610 /* AssignmentList.swift in Sources */,
 				4AE4791E2B68020600D95610 /* ContentView.swift in Sources */,
 				4AE4791C2B68020600D95610 /* Assignment_NotebookApp.swift in Sources */,
 			);
