@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var assignmentItems =
+    [AssignmentItem(course: "English", description: "Song slideshow", dueDate: Date()),
+     AssignmentItem(course: "Government", description: "Test on Monday", dueDate: Date()),
+     AssignmentItem(course: "Math", description: "Pages 12-14", dueDate: Date())]
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            List {
+                ForEach(assignmentItems) { item in
+                    Text(item.description)
+                }
+                .navigationBarTitle("Assignment Notebook", displayMode: .inline)
+            }
         }
-        .padding()
     }
 }
 
