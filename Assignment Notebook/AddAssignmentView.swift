@@ -13,7 +13,7 @@ struct AddAssignmentView: View {
     @State private var description = ""
     @State private var dueDate = Date()
     @Environment(\.presentationMode) var presentationMode
-    static let courses = ["Environmental Science", "Mobile Apps", "Pre-Calculus", "German", "English", "Government"]
+    static let courses = ["Science", "Elective", "Math", "World Language", "English", "History"]
     var body: some View {
         NavigationView {
             Form {

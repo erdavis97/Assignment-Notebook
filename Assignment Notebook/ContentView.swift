@@ -36,7 +36,7 @@ struct ContentView: View {
                 AddAssignmentView(assignmentList: assignmentList)
             })
             .navigationBarItems(leading: EditButton(), trailing: Button(action: {
-                showingAddAssignmentView = true}) {
+                showingAddAssignmentView = true }) {
                     Image(systemName: "plus")
                 })
         }
@@ -49,7 +49,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct AssignmentItem: Identifiable {
+struct AssignmentItem: Identifiable, Codable {
     var id = UUID()
     var course = String()
     var description = String()
