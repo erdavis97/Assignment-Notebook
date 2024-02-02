@@ -10,6 +10,10 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var assignmentList = AssignmentList()
     @State private var showingAddAssignmentView = false
+    @State private var active = true
+    @State private var red = 0.0
+    @State private var green = 0.0
+    @State private var blue = 0.0
     var body: some View {
         NavigationView {
             List {
@@ -30,16 +34,26 @@ struct ContentView: View {
                 .onDelete { indexSet in
                     assignmentList.items.remove(atOffsets: indexSet)
                 }
+                .background(Color(red: red, green: green, blue: blue)
+                    .opacity(0.5))
+                .cornerRadius(5.0)
             }
             .navigationBarTitle("Assignment Notebook", displayMode: .inline)
             .sheet(isPresented: $showingAddAssignmentView, content: {
                 AddAssignmentView(assignmentList: assignmentList)
             })
             .navigationBarItems(leading: EditButton(), trailing: Button(action: {
-                showingAddAssignmentView = true }) {
+                showingAddAssignmentView = true
+                randomColor()
+            }) {
                     Image(systemName: "plus")
                 })
         }
+    }
+    func randomColor() {
+        red = Double.random(in: 0.1...1.0)
+        green = Double.random(in: 0.1...1.0)
+        blue = Double.random(in: 0.1...1.0)
     }
 }
 
